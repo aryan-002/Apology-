@@ -1,21 +1,21 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Apology to Shruti</title>
     <style>
-        /* General Reset */
+       
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body Styling */
+      
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #ff7eb3, #f48fb1); /* Valentine's pink gradient */
+            background: linear-gradient(135deg, #ff7eb3, #f48fb1); 
             color: white;
             display: flex;
             flex-direction: column;
@@ -25,7 +25,7 @@
             position: relative;
         }
 
-        /* Scrolling Text */
+       
         .scrolling-text {
             position: absolute;
             top: 10px;
@@ -49,7 +49,6 @@
             }
         }
 
-        /* Background Decorations */
         .decorations {
             position: absolute;
             top: 0;
@@ -84,7 +83,7 @@
             }
         }
 
-        /* Main Container */
+        
         .container {
             text-align: center;
             max-width: 600px;
@@ -96,7 +95,7 @@
             z-index: 2;
         }
 
-        /* Heart Icon */
+      
         .heart-icon {
             position: absolute;
             top: -40px;
@@ -106,27 +105,27 @@
             animation: heartbeat 1.5s infinite ease-in-out;
         }
 
-        /* Title */
+      
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
         }
 
-        /* Subtitle */
+      
         p {
             font-size: 1.2em;
             line-height: 1.6;
             margin-bottom: 30px;
         }
 
-        /* Button Section */
+       
         .button-section {
             display: flex;
             justify-content: center;
             gap: 20px;
         }
 
-        /* Buttons */
+        
         button {
             padding: 15px 30px;
             font-size: 1em;
@@ -146,24 +145,23 @@
             background-color: #e63946; /* Red for Valentine's */
         }
 
-        /* No Button */
+        
         #no-button {
             background-color: #ffbf00; /* Gold for playfulness */
         }
 
-        /* Hidden Message */
         .hidden-message {
             margin-top: 30px;
             font-size: 1.5em;
             display: none;
         }
 
-        /* Show Message on Click */
+      
         .show {
             display: block;
         }
 
-        /* Background Decorations */
+        
         .decoration-heart {
             content: "❤️";
             color: #ff69b4;
@@ -181,10 +179,10 @@
     </style>
 </head>
 <body>
-    <!-- Scrolling Text -->
+   
     <div class="scrolling-text">I am sorry baby! I am sorry baby! I am sorry baby!</div>
 
-    <!-- Background Decorations -->
+    
     <div class="decorations">
         <span class="decoration-item" style="top: 10%; left: 10%;">❤️</span>
         <span class="decoration-item" style="top: 20%; left: 50%;">⭐</span>
@@ -197,7 +195,7 @@
         <span class="decoration-item" style="top: 90%; left: 70%;">🌸</span>
     </div>
 
-    <!-- Heart Icon -->
+   
     <div class="heart-icon">❤️</div>
 
     <div class="container">
@@ -209,13 +207,13 @@
             Will you forgive me?
         </p>
 
-        <!-- Button Section -->
+        
         <div class="button-section">
             <button id="yes-button">Yes</button>
             <button id="no-button">No</button>
         </div>
 
-        <!-- Hidden Messages -->
+      
         <p class="hidden-message" id="forgive-message">
             Thank you for forgiving me, love! Your kindness means everything to me. ❤️
         </p>
@@ -224,20 +222,19 @@
         </p>
     </div>
 
-    <!-- JavaScript for Interaction -->
-    <script>
-        // Get elements
+      <script>
+        
         const yesButton = document.getElementById('yes-button');
         const noButton = document.getElementById('no-button');
         const forgiveMessage = document.getElementById('forgive-message');
         const playfulMessage = document.getElementById('playful-message');
 
-        // Add event listener to "Yes" button
+        
         yesButton.addEventListener('click', () => {
             forgiveMessage.classList.add('show'); // Show the "Thank you" message
         });
 
-        // Add event listener to "No" button
+        
         noButton.addEventListener('click', () => {
             playfulMessage.classList.add('show'); // Show the playful "Still yes" message
         });
