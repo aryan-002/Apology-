@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Apology to Shruti</title>
     <style>
-       
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-      
+        /* Body Styling */
         body {
             font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #ff7eb3, #f48fb1); /* Valentine's pink gradient */
@@ -20,12 +20,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
+            overflow-x: hidden;
             position: relative;
         }
 
-       
+        /* Scrolling Text */
         .scrolling-text {
             position: absolute;
             top: 10px;
@@ -39,7 +39,6 @@
             text-align: center;
             animation: scrollText 10s linear infinite;
         }
-
         @keyframes scrollText {
             0% {
                 transform: translateX(-100%);
@@ -49,6 +48,7 @@
             }
         }
 
+        /* Background Decorations */
         .decorations {
             position: absolute;
             top: 0;
@@ -57,13 +57,11 @@
             height: 100%;
             pointer-events: none;
         }
-
         .decoration-item {
             position: absolute;
             font-size: 2em;
             animation: float 5s ease-in-out infinite;
         }
-
         @keyframes float {
             0%, 100% {
                 transform: translateY(0);
@@ -83,19 +81,20 @@
             }
         }
 
-        
+        /* Main Container */
         .container {
             text-align: center;
-            max-width: 600px;
+            max-width: 90%; /* Adjusted for mobile */
             padding: 20px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             position: relative;
             z-index: 2;
+            margin-top: 100px; /* Space for heart icon */
         }
 
-      
+        /* Heart Icon */
         .heart-icon {
             position: absolute;
             top: -40px;
@@ -105,27 +104,27 @@
             animation: heartbeat 1.5s infinite ease-in-out;
         }
 
-      
+        /* Title */
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
         }
 
-      
+        /* Subtitle */
         p {
             font-size: 1.2em;
             line-height: 1.6;
             margin-bottom: 30px;
         }
 
-       
+        /* Button Section */
         .button-section {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            flex-direction: column; /* Stack buttons vertically for mobile */
+            gap: 15px;
         }
 
-        
+        /* Buttons */
         button {
             padding: 15px 30px;
             font-size: 1em;
@@ -134,8 +133,8 @@
             border-radius: 50px;
             cursor: pointer;
             transition: transform 0.3s ease;
+            width: 100%; /* Full-width buttons for mobile */
         }
-
         button:hover {
             transform: scale(1.1);
         }
@@ -145,44 +144,60 @@
             background-color: #e63946; /* Red for Valentine's */
         }
 
-        
+        /* No Button */
         #no-button {
             background-color: #ffbf00; /* Gold for playfulness */
         }
 
+        /* Hidden Message */
         .hidden-message {
             margin-top: 30px;
             font-size: 1.5em;
             display: none;
         }
 
-      
+        /* Show Message on Click */
         .show {
             display: block;
         }
 
-        
-        .decoration-heart {
-            content: "❤️";
-            color: #ff69b4;
-        }
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            /* Reduce font sizes for smaller screens */
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .hidden-message {
+                font-size: 1.2em;
+            }
 
-        .decoration-star {
-            content: "⭐";
-            color: #ffd700;
-        }
+            /* Adjust decorations for mobile */
+            .decoration-item {
+                font-size: 1.5em; /* Smaller icons */
+            }
 
-        .decoration-flower {
-            content: "🌸";
-            color: #ff1493;
+            /* Adjust container padding and spacing */
+            .container {
+                padding: 15px;
+                margin-top: 50px; /* Less space for heart icon */
+            }
+
+            /* Adjust scrolling text size */
+            .scrolling-text {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
-   
+
+    <!-- Scrolling Text -->
     <div class="scrolling-text">I am sorry baby! I am sorry baby! I am sorry baby!</div>
 
-    
+    <!-- Background Decorations -->
     <div class="decorations">
         <span class="decoration-item" style="top: 10%; left: 10%;">❤️</span>
         <span class="decoration-item" style="top: 20%; left: 50%;">⭐</span>
@@ -195,25 +210,26 @@
         <span class="decoration-item" style="top: 90%; left: 70%;">🌸</span>
     </div>
 
-   
+    <!-- Heart Icon -->
     <div class="heart-icon">❤️</div>
 
+    <!-- Main Content -->
     <div class="container">
         <h1>Aryan's Heartfelt Apology</h1>
         <p>
             Meri Jaan,<br><br>
-            I’m so sorry for not picking up your call and not answering your texts. I was going through some really fuckedup situation, both in my family and with my friend, and my mind was all over the place.<br><br>
+            I’m so sorry for not picking up your call and not answering your texts. I was going through some really fuckedup situations, both in my family and with my friend, and my mind was all over the place.<br><br>
             You mean the world to me, and I never want you to feel neglected or unimportant. Please know that I value you more than anything else.<br><br>
             Will you forgive me?
         </p>
 
-        
+        <!-- Button Section -->
         <div class="button-section">
             <button id="yes-button">Yes</button>
             <button id="no-button">No</button>
         </div>
 
-      
+        <!-- Hidden Messages -->
         <p class="hidden-message" id="forgive-message">
             Thank you for forgiving me, love! Your kindness means everything to me. ❤️
         </p>
@@ -222,19 +238,17 @@
         </p>
     </div>
 
-      <script>
-        
+    <!-- JavaScript for Interaction -->
+    <script>
         const yesButton = document.getElementById('yes-button');
         const noButton = document.getElementById('no-button');
         const forgiveMessage = document.getElementById('forgive-message');
         const playfulMessage = document.getElementById('playful-message');
 
-        
         yesButton.addEventListener('click', () => {
             forgiveMessage.classList.add('show'); // Show the "Thank you" message
         });
 
-        
         noButton.addEventListener('click', () => {
             playfulMessage.classList.add('show'); // Show the playful "Still yes" message
         });
