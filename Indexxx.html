@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Apology to Shruti</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff7eb3, #f48fb1); /* Valentine's pink gradient */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Scrolling Text */
+        .scrolling-text {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2em;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+            text-align: center;
+            animation: scrollText 10s linear infinite;
+        }
+
+        @keyframes scrollText {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        /* Background Decorations */
+        .decorations {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .decoration-item {
+            position: absolute;
+            font-size: 2em;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Heartbeat Animation */
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Main Container */
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Heart Icon */
+        .heart-icon {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 4em;
+            animation: heartbeat 1.5s infinite ease-in-out;
+        }
+
+        /* Title */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Subtitle */
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Button Section */
+        .button-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Buttons */
+        button {
+            padding: 15px 30px;
+            font-size: 1em;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Yes Button */
+        #yes-button {
+            background-color: #e63946; /* Red for Valentine's */
+        }
+
+        /* No Button */
+        #no-button {
+            background-color: #ffbf00; /* Gold for playfulness */
+        }
+
+        /* Hidden Message */
+        .hidden-message {
+            margin-top: 30px;
+            font-size: 1.5em;
+            display: none;
+        }
+
+        /* Show Message on Click */
+        .show {
+            display: block;
+        }
+
+        /* Background Decorations */
+        .decoration-heart {
+            content: "❤️";
+            color: #ff69b4;
+        }
+
+        .decoration-star {
+            content: "⭐";
+            color: #ffd700;
+        }
+
+        .decoration-flower {
+            content: "🌸";
+            color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <!-- Scrolling Text -->
+    <div class="scrolling-text">I am sorry baby! I am sorry baby! I am sorry baby!</div>
+
+    <!-- Background Decorations -->
+    <div class="decorations">
+        <span class="decoration-item" style="top: 10%; left: 10%;">❤️</span>
+        <span class="decoration-item" style="top: 20%; left: 50%;">⭐</span>
+        <span class="decoration-item" style="top: 30%; left: 80%;">🌸</span>
+        <span class="decoration-item" style="top: 40%; left: 20%;">❤️</span>
+        <span class="decoration-item" style="top: 50%; left: 60%;">⭐</span>
+        <span class="decoration-item" style="top: 60%; left: 90%;">🌸</span>
+        <span class="decoration-item" style="top: 70%; left: 30%;">❤️</span>
+        <span class="decoration-item" style="top: 80%; left: 40%;">⭐</span>
+        <span class="decoration-item" style="top: 90%; left: 70%;">🌸</span>
+    </div>
+
+    <!-- Heart Icon -->
+    <div class="heart-icon">❤️</div>
+
+    <div class="container">
+        <h1>Aryan's Heartfelt Apology</h1>
+        <p>
+            Meri Jaan,<br><br>
+            I’m so sorry for not picking up your call and not answering your texts. I was going through some really fuckedup situation, both in my family and with my friend, and my mind was all over the place.<br><br>
+            You mean the world to me, and I never want you to feel neglected or unimportant. Please know that I value you more than anything else.<br><br>
+            Will you forgive me?
+        </p>
+
+        <!-- Button Section -->
+        <div class="button-section">
+            <button id="yes-button">Yes</button>
+            <button id="no-button">No</button>
+        </div>
+
+        <!-- Hidden Messages -->
+        <p class="hidden-message" id="forgive-message">
+            Thank you for forgiving me, love! Your kindness means everything to me. ❤️
+        </p>
+        <p class="hidden-message" id="playful-message">
+            It still means yes, babe! 😘
+        </p>
+    </div>
+
+    <!-- JavaScript for Interaction -->
+    <script>
+        // Get elements
+        const yesButton = document.getElementById('yes-button');
+        const noButton = document.getElementById('no-button');
+        const forgiveMessage = document.getElementById('forgive-message');
+        const playfulMessage = document.getElementById('playful-message');
+
+        // Add event listener to "Yes" button
+        yesButton.addEventListener('click', () => {
+            forgiveMessage.classList.add('show'); // Show the "Thank you" message
+        });
+
+        // Add event listener to "No" button
+        noButton.addEventListener('click', () => {
+            playfulMessage.classList.add('show'); // Show the playful "Still yes" message
+        });
+    </script>
+</body>
+</html>
