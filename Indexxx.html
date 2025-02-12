@@ -215,11 +215,11 @@
 
     <!-- Main Content -->
     <div class="container">
-        <h1>Aryan's Heartfelt Apology</h1>
+        <h1>My Apology for being a dick</h1>
         <p>
             Meri Jaan,<br><br>
             I’m so sorry for not picking up your call and not answering your texts. I was going through some really fuckedup situations, both in my family and with my friend, and my mind was all over the place.<br><br>
-            You mean the world to me, and I never want you to feel neglected or unimportant. Please know that I value you more than anything else.<br><br>
+            You mean the world to me, and I never want you to feel neglected or unimportant.Mujhe laga I will first handle this but ismehi itna fuckup ho gya. Then lab and it's quiz, G maar li. Boht fucked up tha babe. Jay ka ganda breakup, mere uncle ka vision loss. I felt helpless.But, My baby please know that I value you more than anything else. You are everything to me<br><br>
             Will you forgive me?
         </p>
 
